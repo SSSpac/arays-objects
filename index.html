@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="students" style="font-size: 50px;"></div>
+    <p class="mar"> hey</p>
+</body>
+
+<script>
+    var students = ["Mohamed", "Khalid", "Ali", "Ahmed", "omar", "ibrahim"]
+    document.getElementById("students").innerHTML = students 
+
+    //deletes the arrays starting from the one mentioned below//
+    students.splice(1, 2)
+    console.log(students)
+    
+    //REPLACES an index with a new value //
+    students.splice(2, 1, "salem")
+    console.log(students)
+
+    
+    
+    /*
+    
+    // push add a new index to the array//
+    students.push("salem")
+    // [2] the number indicates which index to change//
+    students [2] = "anas"
+
+    console.log(students)
+
+    // pop deletes the last object//
+    students.pop()
+    console.log(students)
+
+    
+    
+    /*
+    var student = "markos"
+    var student2 = "blade"
+    var student3 = "justin"
+    var student4 = "mohamed"
+    var student5 = "alex"
+    document.getElementById("student").innerHTML = student
+    document.getElementById("student").innerHTML += "<br>" + student2
+    document.getElementById("student").innerHTML += "<br>" + student3
+    document.getElementById("student").innerHTML += "<br>" + student4
+    document.getElementById("student").innerHTML += "<br>" + student5 */
+</script>
+</html>

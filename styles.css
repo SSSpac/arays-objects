@@ -1,0 +1,19 @@
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ .students {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.mar {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
