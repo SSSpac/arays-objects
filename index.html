@@ -7,49 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="students" style="font-size: 50px;"></div>
-    <p class="mar"> hey</p>
+    <h1> Add the names</h1>
+    <input type="text" id="students" style="text-align: center;">
+    <button id="submit"> Press</button>
+    <button id="delete" > Erase</button>
+    <ul id="studentsList"></ul> 
 </body>
 
-<script>
-    var students = ["Mohamed", "Khalid", "Ali", "Ahmed", "omar", "ibrahim"]
-    document.getElementById("students").innerHTML = students 
+<script> 
+     var students = [];
+    document.getElementById("submit").onclick = function() {
+        var name = document.getElementById("students").value;
+        if (name) { 
+            students.push(name);
 
-    //deletes the arrays starting from the one mentioned below//
-    students.splice(1, 2)
-    console.log(students)
-    
-    //REPLACES an index with a new value //
-    students.splice(2, 1, "salem")
-    console.log(students)
+            var listItem = document.createElement("li");
+            listItem.textContent = name;
+            document.getElementById("studentsList").appendChild(listItem);
 
-    
-    
-    /*
-    
-    // push add a new index to the array//
-    students.push("salem")
-    // [2] the number indicates which index to change//
-    students [2] = "anas"
+            document.getElementById("students").value = "";
+        }
+    };
 
-    console.log(students)
+    document.getElementById("delete").onclick = function() {
+        if (students.length > 0) {
+            students.pop();
 
-    // pop deletes the last object//
-    students.pop()
-    console.log(students)
+            var list = document.getElementById("studentsList");
+            list.removeChild(list.lastChild);
+        }
+    };
 
-    
-    
-    /*
-    var student = "markos"
-    var student2 = "blade"
-    var student3 = "justin"
-    var student4 = "mohamed"
-    var student5 = "alex"
-    document.getElementById("student").innerHTML = student
-    document.getElementById("student").innerHTML += "<br>" + student2
-    document.getElementById("student").innerHTML += "<br>" + student3
-    document.getElementById("student").innerHTML += "<br>" + student4
-    document.getElementById("student").innerHTML += "<br>" + student5 */
 </script>
 </html>

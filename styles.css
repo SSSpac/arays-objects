@@ -4,6 +4,14 @@
     padding: 0;
     box-sizing: border-box;
  }
+
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+ }
  
  .students {
     background-color: #f0f0f0;
@@ -16,4 +24,16 @@
     font-size: 16px;
     color: #333;
     line-height: 1.5;
+}
+.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit:hover {
+    background-color: #45a049;
 }
